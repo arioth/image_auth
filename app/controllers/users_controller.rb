@@ -56,10 +56,10 @@ class UsersController < ApplicationController
   end
 
   def user_create_params
-    params.require(:user).permit(:email, :image_file)
+    params.require(:user).permit(:email, :image)
   end
 
   def user_update_params
-    params.require(:user).permit(:image_file)
+    params.require(:user).permit(:image)
   end
 end

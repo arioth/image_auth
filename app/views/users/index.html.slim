@@ -5,7 +5,7 @@
   - @users.each do |user|
     .card
       .card-image
-        = image_tag "data:image/jpeg;base64,#{user.image}"
+        = image_tag user.image
       .card-content.center-align
         span class="activator grey-text text-darken-4"
           = link_to user.email, user_path(user)

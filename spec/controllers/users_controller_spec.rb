@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
   let!(:user) { create(:user) }
-  let(:file_path) { File.join(Rails.root, '/spec/fixtures/images/profile-image.png') }
 
   describe 'GET #index' do
     it 'assigns all the users as @users' do
@@ -45,7 +44,7 @@ RSpec.describe UsersController, type: :controller do
       expect(User.count).to eq(1)
       post :create, params: {
         user: {
-          image_file: fixture_file_upload(file_path,'image/png'),
+          image: base64_image_mock,
           email: 'jon@doe.com'
         }
       }
@@ -56,13 +55,13 @@ RSpec.describe UsersController, type: :controller do
       expect(User.count).to eq(1)
       post :create, params: {
         user: {
-          image_file: fixture_file_upload(file_path,'image/png')
+          image: base64_image_mock
         }
       }
       expect(User.count).to eq(1)
     end
 
-    it 'does not creates the user if image_file is missing' do
+    it 'does not creates the user if image is missing' do
       expect(User.count).to eq(1)
       post :create, params: {
         user: {
@@ -85,7 +84,7 @@ RSpec.describe UsersController, type: :controller do
       expect(User.count).to eq(1)
       post :create, params: {
         user: {
-          image_file: fixture_file_upload(file_path,'image/png')
+          image: base64_image_mock
         }
       }
       expect(User.count).to eq(1)
@@ -95,7 +94,7 @@ RSpec.describe UsersController, type: :controller do
       new_email = 'jon@doe.com'
       post :create, params: {
         user: {
-          image_file: fixture_file_upload(file_path,'image/png'),
+          image: base64_image_mock,
           email: new_email
         }
       }
