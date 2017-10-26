@@ -1,0 +1,14 @@
+= form_for @user do |f|
+  .row
+    .input-field
+      = f.text_field :email
+      = f.label :email
+    .file-field.input-field
+      .btn
+        span File
+        = f.file_field :image_file
+      .file-path-wrapper
+        input class="file-path validate" type="text"
+  .row.center-align
+    = link_to 'Cancel', users_path, class: 'btn waves-effect waves-light red accent-2'
+    button< class="btn waves-effect waves-light" type="submit" name="action" Submit
