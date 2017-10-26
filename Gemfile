@@ -50,6 +50,7 @@ group :test do
   gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
   gem 'faker'
   gem 'database_cleaner'
+  gem 'rails-controller-testing'
 end
 
 group :development do
