@@ -15,8 +15,6 @@
           email = $('#email').val();
 
           if (image && email) {
-            console.log(image);
-            window.image = image;
             $.post('/public/users/login', {
               email: email,
               image: image

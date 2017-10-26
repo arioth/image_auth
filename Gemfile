@@ -32,6 +32,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'slim-rails'
 gem 'materialize-sass'
 gem 'jquery-rails'
+gem 'rest-client'
+gem 'dotenv-rails'
+gem 'sidekiq'
+gem 'sendgrid-actionmailer'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
