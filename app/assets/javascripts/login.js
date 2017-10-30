@@ -18,6 +18,10 @@
             $.post('/public/users/login', {
               email: email,
               image: image
+            }).done(function () {
+              Materialize.toast('Authentication success!!', 2000) // 4000 is the duration of the toast
+            }).fail(function() {
+              Materialize.toast('Authentication fails!!', 2000) // 4000 is the duration of the toast
             });
           }
         };

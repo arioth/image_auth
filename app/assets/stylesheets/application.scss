@@ -26,3 +26,16 @@ img {
     }
   }
 }
+
+#toast-container {
+  top: 350px;
+  left: 5%;
+  right: 5%;
+  width: 300px;
+  margin: auto;
+
+  .toast {
+    display: block;
+    text-align: center;
+  }
+}
