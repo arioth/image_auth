@@ -11,6 +11,9 @@ Things you may want to cover:
   - Redis
   - PostgreSQL
 
+* Installation
+  - bundle install
+
 * Configuration
   - Copy the .env.test in a new file named .env.development
   - Change the variables with your own information
@@ -30,3 +33,23 @@ Things you may want to cover:
 
 * Deployment instructions
   - cap production deploy
+
+
+### Test application: 
+
+* Setup
+  - Go to the home page
+  - Create a new user
+  - Click login button in the top navbar
+
+* Success case
+  - Enter the email of the created user
+  - Enter the image of the created user
+  - Click login
+  - Verify your email
+  
+* Fail case
+  - Enter the email of the created user
+  - Enter a different image
+  - Click login
+  - Verify your email
